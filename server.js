@@ -16,7 +16,7 @@ const app = express()
 // templating
 app.set('view engine', 'ejs');
 app.set('views', './views/');
-app.set('layout', './layout')
+app.set('layout', './Layout')
 
 const oneDay = 1000 * 60 * 60 * 24;
 const middleWares = [
