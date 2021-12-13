@@ -1,0 +1,80 @@
+<div class="hero-body container">
+
+  <div class="columns">
+    <div class="column  is-success">
+      <% if (Object.keys(message).length> 0) { %>
+        <% if (message.type==='success' ) { %>
+          <div class="notification is-success">
+            <%= message.msg %>
+          </div>
+          <% } else { %>
+            <div class="notification is-warning">
+              <%= message.msg %>
+            </div>
+            <% } %>
+              <% } %>
+                <form action="/add-student" method="post" class="box" enctype="multipart/form-data">
+                  <div class="field">
+                    <label htmlFor="" class="label">Fullname</label>
+                    <div class="control">
+                      <input type="text" placeholder="e.g. Emmanuel Moses" name="fullname" class="input" required />
+                    </div>
+                  </div>
+                  <div class="columns">
+                    <div class="field column">
+                      <label htmlFor="" class="label">Matric Number</label>
+                      <div class="control">
+                        <input type="text" placeholder="e.g. P/ND/19/3210023" name="matric_no" class="input" required />
+                      </div>
+                    </div>
+                    <div class="field column">
+                      <label htmlFor="" class="label">Email</label>
+                      <div class="control">
+                        <input type="email" placeholder="e.g. bobsmith@gmail.com" name="email" class="input" required />
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="columns">
+                    <div class="field column">
+                      <label htmlFor="" class="label">Department</label>
+                      <div class="control">
+                        <input type="text" placeholder="e.g. Computer Technology" name="dept" class="input" required />
+                      </div>
+                    </div>
+                    <div class="field column">
+                      <label htmlFor="" class="label">School</label>
+                      <div class="control">
+                        <input type="text" placeholder="e.g. School of Technology" name="school" class="input" required />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="columns">
+                    <div class="field column">
+                      <label htmlFor="" class="label">Level</label>
+                      <div class="control">
+                        <input type="text" placeholder="e.g. ND3" name="level" class="input" required />
+                      </div>
+                    </div>
+                    <div class="field column">
+                      <label htmlFor="" class="label">Student Image</label>
+                      <div class="control">
+                        <input type="file" accept="image/*" name="image" class="input" required />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <button class="button is-success is-fullwidth">
+                      Add Student
+                    </button>
+                  </div>
+                </form>
+    </div>
+    <div class="column" style="flex-direction: column;justify-content: center;align-items: center;display: flex;">
+      <div class="fingerprint-wrapper">
+        <img src="fingerprint.jpg" alt="fingerprint_image" style="margin-bottom: 5px;">
+        <p>Click Here to Capture Student Fingerprint</p>
+      </div>
+    </div>
+  </div>
+</div>

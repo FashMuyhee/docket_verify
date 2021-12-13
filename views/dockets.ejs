@@ -1,0 +1,46 @@
+<div class="container is-max-widescreen">
+  <div class="box is-primary" style="margin-top: 20px; height: 60px;align-items: center;justify-content: center;">
+    <p> All Students</p>
+  </div>
+  <table class="table is-hoverable is-fullwidth" style="margin-top: 50px;">
+    <thead>
+      <tr>
+        <th>S/N</abbr></th>
+        <th>Docket No</th>
+        <th>Matric Number</th>
+        <th>Fullname</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (data.length>0) { %>
+        <% data.forEach(element=> { %>
+          <tr>
+            <td>
+              <%= element._id %>
+            </td>
+            <td>
+             <a href="/docket/<%= element.docket_no %>" style="font-weight: bold;text-transform: uppercase;"> <%= element.docket_no %></a>
+            </td>
+            <td>
+              <%= element.student.matric_no %>
+            </td>
+            <td>
+              <%= element.student.fullname %>
+            </td>
+          </tr>
+          <% }) %>
+
+            <% } else { %>
+              <div>
+                <td class="text-center text-muted">
+                </td>
+                <td class="text-center text-muted">
+                  Nothing to show now
+                </td>
+                <td class="text-center text-muted">
+                </td>
+              </div>
+              <% } %>
+    </tbody>
+  </table>
+</div>

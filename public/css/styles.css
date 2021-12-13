@@ -1,0 +1,86 @@
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.dashboard-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 150px; */
+  width: 100%;
+  margin-top: 10%;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.actions-item {
+  width: 30%;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+  border-radius: 5px;
+  padding: 25px;
+  height: 170px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+.actions-item .icon {
+  background: rgb(42, 218, 218);
+  width: 70px;
+  height: 70px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.actions-item .a {
+  color: rgb(42, 218, 218) !important;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.fingerprint-wrapper {
+  height: 300px;
+  width: 300px;
+  /* background: green; */
+  align-self: center;
+}
+
+.welcome {
+  height: 150px;
+  margin-top: 5%;
+  border-radius: 20px;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+  padding: 15px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.welcome div {
+  height: 60px;
+}
+.welcome div h4 {
+  color: rgb(42, 218, 218);
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.welcome div p {
+  font-weight: 300;
+}
+
+.welcome img {
+  display: block;
+  position: absolute;
+  top: -5%;
+  right: 5;
+  width: 300;
+  height: 300;
+  object-fit: contain;
+}
+

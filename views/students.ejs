@@ -1,0 +1,74 @@
+<div class="container is-max-widescreen">
+  <div class="box is-primary" style="margin-top: 20px; height: 60px;align-items: center;justify-content: center;">
+    <p> All Students</p>
+  </div>
+  <table class="table is-hoverable is-fullwidth" style="margin-top: 50px;">
+    <thead>
+      <tr>
+        <th>S/N</abbr></th>
+        <th>Fullname</th>
+        <th>Matric Number</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>School</th>
+        <th>Level</th>
+        <th>Student Image</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>S/N</abbr></th>
+        <th>Fullname</th>
+        <th>Matric Number</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>School</th>
+        <th>Level</th>
+        <th>Student Image</th>
+      </tr>
+    </tfoot>
+    <tbody>
+      <% if (data.length>0) { %>
+        <% data.forEach(element=> { %>
+          <tr>
+            <td>
+              <%= element._id %>
+            </td>
+            <td>
+              <%= element.fullname %>
+            </td>
+            <td>
+              <%= element.matric_no %>
+            </td>
+            <td>
+              <%= element.email %>
+            </td>
+            <td>
+              <%= element.dept %>
+            </td>
+            <td>
+              <%= element.school %>
+            </td>
+            <td>
+              <%= element.level %>
+            </td>
+            <td>
+              <%= element.dp %>
+            </td>
+          </tr>
+          <% }) %>
+
+            <% } else { %>
+              <div>
+                <td class="text-center text-muted">
+                </td>
+                <td class="text-center text-muted">
+                  Nothing to show now
+                </td>
+                <td class="text-center text-muted">
+                </td>
+              </div>
+              <% } %>
+    </tbody>
+  </table>
+</div>
